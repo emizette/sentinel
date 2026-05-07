@@ -1,0 +1,144 @@
+/* ── Navbar ── */
+.sentinel-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #0f1e30;
+  padding: 0 24px;
+  height: 58px;
+  flex-shrink: 0;
+  border-bottom: 2px solid #1a6eb5;
+  z-index: 100;
+}
+
+/* ── Brand (left side) ── */
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.nav-shield {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.nav-brand-name {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ── Nav links (right side) ── */
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-link {
+  display: inline-block;
+  padding: 6px 14px;
+  color: #a8bdd4;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: color 0.18s, background 0.18s;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+  text-decoration: none;
+}
+
+.nav-link-btn {
+  background: transparent;
+  border: none;
+  font-family: inherit;
+}
+
+/* ── Modals ── */
+.sentinel-modal-header {
+  background: #0f1e30;
+  color: #fff;
+  border-bottom: 1px solid #1a6eb5;
+}
+
+.sentinel-modal-header .btn-close {
+  filter: invert(1);
+}
+
+.sentinel-modal-body {
+  font-size: 0.93rem;
+  line-height: 1.65;
+  color: #2d3748;
+}
+
+.sentinel-modal-body p {
+  margin-bottom: 12px;
+}
+
+.sentinel-modal-body a {
+  color: #1a6eb5;
+  text-decoration: underline;
+}
+
+.modal-notice {
+  background: #eef4ff;
+  border-left: 4px solid #1a6eb5;
+  border-radius: 4px;
+  padding: 10px 14px;
+  margin-top: 12px;
+  font-size: 0.88rem;
+  color: #1c2b3a;
+}
+
+.modal-notice.warning {
+  background: #fff8e1;
+  border-left-color: #f59e0b;
+}
+
+/* ── FAQs ── */
+.faq-item {
+  margin-bottom: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.faq-item h5 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0f1e30;
+  margin-bottom: 6px;
+}
+
+.faq-item p {
+  margin: 0;
+  color: #4a5568;
+  font-size: 0.9rem;
+}
+
+.modal-close-btn {
+  background: #1a6eb5 !important;
+  border-color: #1a6eb5 !important;
+  padding: 8px 24px;
+}
+
+.modal-close-btn:hover {
+  background: #155a96 !important;
+  border-color: #155a96 !important;
+}

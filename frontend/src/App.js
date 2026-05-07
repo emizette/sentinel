@@ -1,14 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
 import React from 'react';
-// import { Switch, Route, Link } from "react-router-dom"
-import "bootstrap/dist/css/bootstrap.min.css"
+import Navbar from './components/Navbar';
+import ChatBot from './components/ChatBot';
+import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      Hello world :3
+    <div className="app-root">
+      <Navbar />
+      <div className="app-body">
+        <ChatBot />
+      </div>
     </div>
   );
 }
+
 export default App;

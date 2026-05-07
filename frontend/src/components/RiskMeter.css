@@ -1,0 +1,97 @@
+.risk-meter {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 22px 24px 18px;
+  margin: 10px 0 4px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #0f1e30;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.meter-heading {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #6b7280;
+  margin: 0 0 10px;
+}
+
+/* ── Level badge ── */
+.meter-level-row {
+  margin-bottom: 16px;
+}
+
+.meter-badge {
+  display: inline-block;
+  font-size: 1.15rem;
+  font-weight: 800;
+  padding: 4px 14px 4px 0;
+  border-radius: 6px;
+}
+
+.meter-badge.level-low         { color: #16a34a; }
+.meter-badge.level-moderate    { color: #d97706; }
+.meter-badge.level-high        { color: #ea580c; }
+.meter-badge.level-very-high   { color: #dc2626; }
+
+/* ── Track ── */
+.meter-track {
+  position: relative;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #e5e7eb;
+  margin-bottom: 6px;
+}
+
+/* The always-full gradient underneath */
+.meter-gradient-fill {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    #22c55e 0%,
+    #84cc16 20%,
+    #f59e0b 42%,
+    #f97316 65%,
+    #ef4444 100%
+  );
+  border-radius: inherit;
+}
+
+/* Gray overlay that shrinks from the right to reveal the gradient */
+.meter-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background: #e5e7eb;
+  border-radius: 0 10px 10px 0;
+  transition: width 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ── Tick labels ── */
+.meter-ticks {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  padding: 0 2px;
+}
+
+.meter-ticks span {
+  font-size: 0.72rem;
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+/* ── Description ── */
+.meter-description {
+  margin: 0;
+  font-size: 0.88rem;
+  color: #374151;
+  line-height: 1.55;
+  border-top: 1px solid #f3f4f6;
+  padding-top: 12px;
+}
