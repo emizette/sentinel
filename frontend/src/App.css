@@ -1,22 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700;800&display=swap');
+
+/* ═══════════════════════════════════════════
+   DESIGN TOKENS  — new Sentinel palette
+   Primary gradient : teal #1BBFC4 → purple #6B5CE7
+   Dark bg          : #0b1829
+   Accent teal      : #1BBFC4
+   Accent purple    : #6B5CE7
+═══════════════════════════════════════════ */
+
+:root {
+  --teal:        #1BBFC4;
+  --teal-light:  #3dd6db;
+  --purple:      #6B5CE7;
+  --purple-light:#8b7cf0;
+  --grad:        linear-gradient(135deg, #1BBFC4 0%, #4B6EE8 55%, #6B5CE7 100%);
+  --grad-btn:    linear-gradient(135deg, #1BBFC4, #6B5CE7);
+  --bg-dark:     #0b1829;
+  --bg-mid:      #0f2240;
+  --bg-panel:    #152d50;
+  --bg-card:     #1a3560;
+  --border:      rgba(27,191,196,0.2);
+  --border-soft: rgba(255,255,255,0.07);
+  --text:        #e8f4ff;
+  --text-muted:  rgba(180,215,240,0.65);
+}
+
 *,
 *::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+*::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html,
-body,
-#root {
-  height: 100%;
-}
+html, body, #root { height: 100%; }
 
 body {
-  background: #0a223a;
+  background: var(--bg-dark);
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text);
 }
 
-/* Full-viewport flex column so navbar + chat fill the screen exactly */
 .app-root {
   display: flex;
   flex-direction: column;
@@ -24,10 +44,10 @@ body {
   overflow: hidden;
 }
 
-/* Body below the navbar: fills remaining space, centers the chat panel */
 .app-body {
   flex: 1;
   min-height: 0;
   display: flex;
   overflow: hidden;
+  background: var(--bg-dark);
 }
