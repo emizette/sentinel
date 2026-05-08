@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import RiskMeter from './RiskMeter';
+import sentinelLogo from '../pictures/logo.png';
 import './ChatBot.css';
 
 const API_URL = process.env.REACT_APP_API_URL || '';
@@ -38,7 +39,6 @@ export default function ChatBot() {
     setLoading(true);
     setError('');
 
-    // Trigger final assessment after the AI has asked MAX_QUESTIONS questions
     const isFinalAssessment = assistantCount >= MAX_QUESTIONS;
 
     try {
@@ -61,7 +61,6 @@ export default function ChatBot() {
 
       if (riskMatch) {
         setRiskLevel(riskMatch[1].toUpperCase());
-        // Strip the RISK_LEVEL line so it doesn't appear in the chat bubble
         displayResponse = data.response
           .replace(RISK_LEVEL_REGEX, '')
           .replace(/\n{3,}/g, '\n\n')
@@ -94,7 +93,6 @@ export default function ChatBot() {
   const progressLabel = sessionComplete
     ? 'Assessment Complete'
     : `Question ${questionNumber} of ${MAX_QUESTIONS}`;
-
   const progressPercent = sessionComplete
     ? 100
     : Math.round((questionNumber / MAX_QUESTIONS) * 100);
@@ -163,7 +161,7 @@ export default function ChatBot() {
         <div ref={bottomRef} />
       </div>
 
-      {/* Input — hidden after session ends */}
+      {/* Input */}
       {!sessionComplete ? (
         <div className="chatbot-input-area">
           <textarea
