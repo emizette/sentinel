@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import ChatBot from './components/ChatBot';
 import Home from './components/Home';
 import About from './components/About';
-import FAQ from './components/FAQ';
+import FAQ from './components/Faq';
 import './App.css';
 
 function App() {
