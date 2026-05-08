@@ -20,7 +20,7 @@ export default function Navbar({ page, setPage }) {
         </span>
       </button>
 
-      <ul className="nav-links" role="list">
+      <ul className="nav-links">
         {links.map(({ id, label }) => (
           <li key={id}>
             <button

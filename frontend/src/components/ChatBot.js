@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import RiskMeter from './RiskMeter';
-import sentinelLogo from '../pictures/logo.png';
 import './ChatBot.css';
 
 const API_URL = process.env.REACT_APP_API_URL || '';

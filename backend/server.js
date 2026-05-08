@@ -118,6 +118,12 @@ app.use((err, req, res, next) => {
   res.status(err.status || 500).json({ error: err.message || 'An unexpected server error occurred.' });
 });
 
-app.listen(PORT, () => {
-  console.log(`Sentinel server running on port ${PORT}`);
-});
+// Export for Vercel serverless
+module.exports = app;
+
+// Local dev only
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Sentinel server running on port ${PORT}`);
+  });
+}
